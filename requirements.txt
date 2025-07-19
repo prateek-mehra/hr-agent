@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+langgraph
+sentence-transformers
+numpy
+PyMuPDF
+requests 
+streamlit 

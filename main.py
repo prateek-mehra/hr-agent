@@ -255,11 +255,8 @@ class RemoteWorkFAQAgent:
 def polishing_agent(state: dict) -> dict:
     if "screening_raw_answer" in state:
         answer = state["screening_raw_answer"]
-        prompt = (
-            "You are an HR recruiter. Rewrite the following resume screening output so it is clear, concise, and sounds like a human recruiter talking to a hiring manager. "
-            "Do not include any meta-commentary or instructions. Only provide the final answer.\n\n"
-            f"Screening Output:\n{answer}\n"
-        )
+        state["final_response"] = answer
+        return state
     elif "policy_feedback_raw" in state:
         feedback_data = state["policy_feedback_raw"]
         question = feedback_data["question"]

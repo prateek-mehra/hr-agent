@@ -14,9 +14,9 @@ for msg in st.session_state['messages']:
     align = 'user' if msg['sender'] == 'user' else 'agent'
     with st.container():
         if align == 'user':
-            st.markdown(f"<div style='text-align:right; background:#d1e7dd; border-radius:18px; padding:10px 16px; display:inline-block; margin:4px 0; max-width:70%; float:right;'>{msg['text']}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='text-align:right; background:#d1e7dd; border-radius:18px; padding:10px 16px; display:inline-block; margin:4px 0; max-width:70%; float:right; color:#000;'>{msg['text']}</div>", unsafe_allow_html=True)
         else:
-            st.markdown(f"<div style='text-align:left; background:#fff; border-radius:18px; padding:10px 16px; display:inline-block; margin:4px 0; max-width:70%; float:left; border:1px solid #eee;'>{msg['text']}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='text-align:left; background:#fff; border-radius:18px; padding:10px 16px; display:inline-block; margin:4px 0; max-width:70%; float:left; border:1px solid #eee; color:#000;'>{msg['text']}</div>", unsafe_allow_html=True)
 
 st.markdown("<div style='clear:both'></div>", unsafe_allow_html=True)
 
